@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>C - Dynamic Memory</title>
+    <style>
+        body { font-family: Arial; background: #f0f4f8; padding: 20px; }
+        .container { max-width: 700px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; border-bottom: 3px solid #2ecc71; padding-bottom: 10px; }
+        pre { background: #2c3e50; color: #ecf0f1; padding: 20px; border-radius: 8px; overflow-x: auto; }
+        .back { display: inline-block; margin-top: 20px; background: #3498db; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; }
+        .back:hover { background: #2980b9; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Exercise 10: Dynamic Memory Allocation</h1>
+        <p><strong>Description:</strong> Using malloc(), calloc(), and free() for dynamic memory.</p >
+        <h3>Code:</h3>
+        <pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+    int *arr;
+    int n = 5;
+    
+    // Allocate memory for 5 integers
+    arr = (int*)malloc(n * sizeof(int));
+    
+    if(arr == NULL) {
+        printf("Memory allocation failed!\n");
+        return 1;
+    }
+    
+    // Use the memory
+    for(int i = 0; i < n; i++) {
+        arr[i] = i * 10;
+        printf("%d ", arr[i]);
+    }
+    
+    // Free the memory
+    free(arr);
+    return 0;
+}
+        </pre>
+        <a href="workinprogramming.html " class="back">← Back to Exercises</a >
+    </div>
+</body>
+</html>
