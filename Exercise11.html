@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 11 - Responsive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f0f4f8;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .col {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+            text-align: center;
+        }
+        .col:nth-child(1) { border-top: 5px solid #3498db; }
+        .col:nth-child(2) { border-top: 5px solid #e74c3c; }
+        .col:nth-child(3) { border-top: 5px solid #2ecc71; }
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .col {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+            body {
+                background: #ecf0f1;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+            .col {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>📱 Responsive Design</h1>
+    <p style="text-align:center;color:#7f8c8d;">Resize the browser to see the changes</p >
+    
+    <div class="row">
+        <div class="col">
+            <h3>Desktop View</h3>
+            <p>3 columns side by side</p >
+            <p style="font-size:12px;color:#95a5a6;">Screen > 768px</p >
+        </div>
+        <div class="col">
+            <h3>Tablet View</h3>
+            <p>Columns stack vertically</p >
+            <p style="font-size:12px;color:#95a5a6;">Screen 480px - 768px</p >
+        </div>
+        <div class="col">
+            <h3>Mobile View</h3>
+            <p>Single column layout</p >
+            <p style="font-size:12px;color:#95a5a6;">Screen < 480px</p >
+        </div>
+    </div>
+    <br>
+    <a href="workinwebprogramming.html " style="display:block;text-align:center;">← Back to Exercises</a >
+</body>
+</html>
