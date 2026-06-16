@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 10 - Product Cards</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #ecf0f1;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-icon {
+            font-size: 50px;
+            margin: 10px 0;
+        }
+        .product-name {
+            color: #2c3e50;
+            margin: 10px 0;
+        }
+        .product-price {
+            color: #e74c3c;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .product-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product-btn:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>🛍️ Our Products</h1>
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-icon">📱</div>
+            <h3 class="product-name">Smartphone</h3>
+            <p class="product-price">$599</p >
+            <button class="product-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <div class="product-icon">💻</div>
+            <h3 class="product-name">Laptop</h3>
+            <p class="product-price">$999</p >
+            <button class="product-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <div class="product-icon">🎧</div>
+            <h3 class="product-name">Headphones</h3>
+            <p class="product-price">$149</p >
+            <button class="product-btn">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <div class="product-icon">⌚</div>
+            <h3 class="product-name">Smartwatch</h3>
+            <p class="product-price">$299</p >
+            <button class="product-btn">Add to Cart</button>
+        </div>
+    </div>
+    <br>
+    <a href="workinwebprogramming.html " style="display:block;text-align:center;">← Back to Exercises</a >
+</body>
+</html>
