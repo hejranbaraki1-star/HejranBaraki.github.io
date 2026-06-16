@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 6 - Flexbox</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #ecf0f1;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .box {
+            background: #3498db;
+            color: white;
+            padding: 30px;
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        .box:hover {
+            transform: scale(1.05);
+        }
+        .box:nth-child(2) { background: #e74c3c; }
+        .box:nth-child(3) { background: #2ecc71; }
+        .box:nth-child(4) { background: #f39c12; }
+        .box:nth-child(5) { background: #9b59b6; }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;color:#2c3e50;">CSS Flexbox Layout</h1>
+    <p style="text-align:center;">Flexible boxes that adjust to screen size</p >
+    
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+    </div>
+    
+    <br>
+    <a href="workinwebprogramming.html " style="display:block;text-align:center;">← Back to Exercises</a >
+</body>
+</html>
