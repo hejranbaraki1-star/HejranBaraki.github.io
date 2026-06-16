@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>C - File Handling</title>
+    <style>
+        body { font-family: Arial; background: #f0f4f8; padding: 20px; }
+        .container { max-width: 700px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; border-bottom: 3px solid #e74c3c; padding-bottom: 10px; }
+        pre { background: #2c3e50; color: #ecf0f1; padding: 20px; border-radius: 8px; overflow-x: auto; }
+        .back { display: inline-block; margin-top: 20px; background: #3498db; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; }
+        .back:hover { background: #2980b9; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Exercise 9: File Handling</h1>
+        <p><strong>Description:</strong> Reading from and writing to files in C.</p >
+        <h3>Writing to a File:</h3>
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    FILE *file = fopen("data.txt", "w");
+    if(file != NULL) {
+        fprintf(file, "Hello, this is a file!\n");
+        fclose(file);
+        printf("File created successfully!\n");
+    }
+    return 0;
+}
+        </pre>
+        <h3>Reading from a File:</h3>
+        <pre>
+FILE *file = fopen("data.txt", "r");
+if(file != NULL) {
+    char line[100];
+    while(fgets(line, sizeof(line), file)) {
+        printf("%s", line);
+    }
+    fclose(file);
+}
+        </pre>
+        <a href="workinprogramming.html " class="back">← Back to Exercises</a >
+    </div>
+</body>
+</html>
