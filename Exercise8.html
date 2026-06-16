@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 8 - Profile Card</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .profile-card {
+            background: white;
+            max-width: 350px;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #3498db;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            color: white;
+        }
+        .name {
+            color: #2c3e50;
+            margin: 0;
+        }
+        .title {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .divider {
+            border: 1px solid #ecf0f1;
+            margin: 20px 0;
+        }
+        .info-item {
+            display: inline-block;
+            margin: 0 15px;
+            color: #34495e;
+        }
+        .info-item span {
+            display: block;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <div class="profile-img">👤</div>
+        <h2 class="name">John Doe</h2>
+        <p class="title">Web Developer</p >
+        
+        <hr class="divider">
+        
+        <div class="info-item">
+            <span>25</span>
+            Age
+        </div>
+        <div class="info-item">
+            <span>3</span>
+            Projects
+        </div>
+        <div class="info-item">
+            <span>12</span>
+            Exercises
+        </div>
+        
+        <hr class="divider">
+        
+        <p style="color:#7f8c8d;font-size:14px;">📧 john@example.com</p >
+        <p style="color:#7f8c8d;font-size:14px;">📍 Iran</p >
+        
+        <a href="workinwebprogramming.html " style="display:inline-block;margin-top:15px;">← Back</a >
+    </div>
+</body>
+</html>
