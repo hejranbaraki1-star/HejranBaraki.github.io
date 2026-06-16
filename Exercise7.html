@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 7 - Grid</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #2c3e50;
+            padding: 20px;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .item {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            transition: all 0.3s;
+        }
+        .item:hover {
+            transform: rotate(5deg) scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        .item:nth-child(1) { background: #ff6b6b; }
+        .item:nth-child(2) { background: #feca57; }
+        .item:nth-child(3) { background: #48dbfb; }
+        .item:nth-child(4) { background: #1dd1a1; }
+        .item:nth-child(5) { background: #ff9ff3; }
+        .item:nth-child(6) { background: #54a0ff; }
+        .item:nth-child(7) { background: #5f27cd; color: white; }
+        .item:nth-child(8) { background: #ff6348; }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Grid Layout</h1>
+    <div class="grid-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+    </div>
+    <br>
+    <a href="workinwebprogramming.html " style="display:block;text-align:center;color:white;">← Back to Exercises</a >
+</body>
+</html>
