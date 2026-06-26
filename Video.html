@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .video-box {
+            background: #f1f5f9;
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+        video {
+            width: 100%;
+            border-radius: 12px;
+            background: #000;
+        }
+        .btn-group {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .btn-vid {
+            padding: 0.6rem 2rem;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .btn-play {
+            background: #2563eb;
+            color: white;
+        }
+        .btn-play:hover { background: #1d4ed8; }
+        .btn-stop {
+            background: #e2e8f0;
+            color: #1e293b;
+        }
+        .btn-stop:hover { background: #cbd5e1; }
+        .btn-back {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background: #0f172a;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="video-box">
+    <h3>▶️ Playing Video</h3>
+    
+    <!-- ویدیو را با id مشخص کنید -->
+    <video id="myVideo" width="400" height="240">
+        <source src="PLXP0678.MOV" type="video/mp4">
+        <source src="PLXP0678.MOV" type="video/mp4">
+        مرورگر شما از تگ ویدیو پشتیبانی نمی‌کند.
+    </video>
+
+    <div class="btn-group">
+        <!-- دقت کنید: id و نام توابع حتماً با جاوااسکریپت یکی باشد -->
+        <button class="btn-vid btn-play" onclick="playVideo()">▶ Play Video</button>
+        <button class="btn-vid btn-stop" onclick="stopVideo()">⏹ Stop Video</button>
+    </div>
+
+    <br>
+    <a href="web-programming.html" class="btn-back">← Back to exercise</a >
+</div>
+
+<script>
+    // تابع Play: ویدیو را پخش می‌کند
+    function playVideo() {
+        var video = document.getElementById("myVideo");
+        video.play();
+    }
+
+    // تابع Stop: ویدیو را متوقف (pause) می‌کند و به ابتدا برمی‌گرداند
+    function stopVideo() {
+        var video = document.getElementById("myVideo");
+        video.pause();        // pause می‌کند
+        video.currentTime = 0; // به ثانیه ۰ برمی‌گردد (جلوی قاب اول)
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Exercise</title>
+</head>
+<body>
+  <h1>JavaScript Exercise</h1>
+  <p>Click the button to change this text.</p >
+  <button id="changeTextBtn">Change Text</button>
+  <br><br>
+  
+  <button><a href="web-programming.html" class="btn btn-secondary">Back to exercise</a ></button>
+  
+  
+  <script>
+    const textElement = document.querySelector('p');
+    const changeBtn = document.getElementById('changeTextBtn');
+
+    const messages = [
+      "JavaScript changed the page content.",
+      "Click the button to change this text.",
+      "You clicked! Text updated.",
+      "Hello from JavaScript",
+      "Dynamic content — live!",
+      "JavaScript in action"
+    ];
+
+    changeBtn.addEventListener('click', function() {
+      const currentText = textElement.textContent;
+      let newText;
+      do {
+        const randomIndex = Math.floor(Math.random() * messages.length);
+        newText = messages[randomIndex];
+      } while (newText === currentText && messages.length > 1);
+      textElement.textContent = newText;
+    });
+  </script>
+</body>
+</html>
